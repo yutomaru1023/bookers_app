@@ -1,0 +1,55 @@
+// Place all the styles related to the books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  
+  header{
+    height:50px;
+    width:100%;
+  }
+  
+  h1{
+    font-family: verdana, arial, helvetica, sans-serif;
+  }
+  
+  table{
+    margin-left:40px;
+  }  
+  
+  td{
+  padding-bottom: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  }
+  
+  
+  h2{
+  margin-left: 35px;
+  margin-top: 10px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  }
+  
+  h5{
+  margin-left:35px;
+  margin-top:15px;
+  }
+  
+  .post{
+   margin-top:15px;
+   margin-left:35px; 
+  }
+  
+  .post2{
+   margin-top:10px;
+   margin-left:35px; 
+  }
+  
+  .post3{
+   margin-top:10px;
+   margin-left:35px; 
+  }
+  
