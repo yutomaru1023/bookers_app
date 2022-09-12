@@ -10,8 +10,9 @@ class BooksController < ApplicationController
   def create
     book = Book.new(list_params)
    if book.save
-     flash[:notice] = 'successfully'
+     flash[:notice] = 'successfully create'
     redirect_to name_path(book.id)
+    
    end
   end
   
@@ -26,7 +27,10 @@ class BooksController < ApplicationController
   def update
     book = Book.find(params[:id])
     book.update(list_params)
+    if book.save
+     flash[:notice] = 'successfully update'
     redirect_to name_path(book.id)  
+    end
   end
   
   def destroy
@@ -34,6 +38,7 @@ class BooksController < ApplicationController
     book.destroy
     redirect_to books_path
   end
+  
   
  private
   # ストロングパラメータ
