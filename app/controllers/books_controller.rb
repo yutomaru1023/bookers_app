@@ -6,16 +6,20 @@ class BooksController < ApplicationController
     @books = Book.new
     @b =Book.all
   end
+
   
   def create
-    book = Book.new(list_params)
-   if book.save
-     flash[:notice] = 'successfully create'
-    redirect_to name_path(book.id)
-    
-   end
+    @books= Book.new(book_params)
+    if @books.save
+      flash[:notice] = 'successfully create'
+      redirect_to name_path(@books.id)
+    else
+       @b =Book.all
+      render :index
+    end
   end
-  
+
+
   def show
     @book = Book.find(params[:id])
   end
@@ -23,16 +27,19 @@ class BooksController < ApplicationController
   def edit
     @book = Book.find(params[:id])
   end
-  
+
   def update
-    book = Book.find(params[:id])
-    book.update(list_params)
-    if book.save
+    @book = Book.find(params[:id])
+    @book.update(book_params)
+    if @book.save
      flash[:notice] = 'successfully update'
-    redirect_to name_path(book.id)  
+    redirect_to name_path(@book.id)
+
+    else
+     render :edit
     end
   end
-  
+
   def destroy
     book = Book.find(params[:id])
     book.destroy
@@ -42,7 +49,7 @@ class BooksController < ApplicationController
   
  private
   # ストロングパラメータ
-  def list_params
+  def book_params
     params.require(:book).permit(:title, :body)
   end
 end

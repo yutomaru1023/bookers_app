@@ -20,6 +20,10 @@
     margin-left:40px;
   }  
   
+  thead{
+    display:flex;
+  }
+  
   td{
   padding-bottom: 7px;
   padding-left: 15px;
@@ -38,18 +42,6 @@
   margin-top:15px;
   }
   
-  .post{
-   margin-top:15px;
-   margin-left:35px; 
+  .form{
+    margin-left:33px;
   }
-  
-  .post2{
-   margin-top:10px;
-   margin-left:35px; 
-  }
-  
-  .post3{
-   margin-top:10px;
-   margin-left:35px; 
-  }
-  
