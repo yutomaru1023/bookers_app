@@ -20,3 +20,9 @@
 
   <p class="edit-form"><%= f.submit'Update Book' %></p>
 <% end %>
+
+<P class="showp">
+  <%= link_to'Show',name_path(@book.id) %>
+  |
+  <%= link_to'Back',books_path %>
+</P>
